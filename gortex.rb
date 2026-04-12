@@ -5,21 +5,21 @@
 class Gortex < Formula
   desc "Code intelligence engine that indexes repositories into an in-memory knowledge graph."
   homepage "https://github.com/zzet/gortex"
-  version "0.0.1-test"
+  version "0.1.0"
   license "Custom (PolyForm Small Business base)"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zzet/gortex/releases/download/v0.0.1-test/gortex_0.0.1-test_darwin_amd64.tar.gz"
-      sha256 "371f1f5794103a14aa844e22aa63c731ff4d6b301665fc50273654196a787411"
+      url "https://github.com/zzet/gortex/releases/download/v0.1.0/gortex_darwin_amd64.tar.gz"
+      sha256 "2eaa62ac58bfdb0d7c1fa873059984047cce776a554fffced12ad97a330620e7"
 
       define_method(:install) do
         bin.install "gortex"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zzet/gortex/releases/download/v0.0.1-test/gortex_0.0.1-test_darwin_arm64.tar.gz"
-      sha256 "2655cb6cb48fc82d90e48fb4bc6754d990a41a3cb58e050124b9d79ca185a9fb"
+      url "https://github.com/zzet/gortex/releases/download/v0.1.0/gortex_darwin_arm64.tar.gz"
+      sha256 "7ca9d470e64b44270e6c3050604448ffbc0f79ad1ea26e9a4b12123da631e927"
 
       define_method(:install) do
         bin.install "gortex"
@@ -29,15 +29,15 @@ class Gortex < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zzet/gortex/releases/download/v0.0.1-test/gortex_0.0.1-test_linux_amd64.tar.gz"
-      sha256 "ed6f485fcd3658149842a5dfc7b25d779997d7c0656709cd74285fe512f60aeb"
+      url "https://github.com/zzet/gortex/releases/download/v0.1.0/gortex_linux_amd64.tar.gz"
+      sha256 "c5296ca080b02487004e587c94e0cfb6ade0e457714ce0d327bfa041308961c0"
       define_method(:install) do
         bin.install "gortex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zzet/gortex/releases/download/v0.0.1-test/gortex_0.0.1-test_linux_arm64.tar.gz"
-      sha256 "0062f3b8928b6e958cde28324fbcbe4a8374b7ee14781a5b93e2ed39527324cb"
+      url "https://github.com/zzet/gortex/releases/download/v0.1.0/gortex_linux_arm64.tar.gz"
+      sha256 "731e66f71ffff7efb1b6f4831c26fa34b5c2b7c63f1541d78de3957dc3c82a82"
       define_method(:install) do
         bin.install "gortex"
       end
